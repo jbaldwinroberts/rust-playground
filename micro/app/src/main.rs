@@ -1,5 +1,4 @@
-#![feature(asm)]
-#![feature(lang_items)]
+#![feature(asm, lang_items)]
 #![no_main]
 #![no_std]
 
@@ -14,7 +13,7 @@ pub extern "C" fn main() -> ! {
     power_on_gpioa();
     put_pa5_in_output_mode();
 
-    let ticks = 100_000;
+    let ticks = 25_000;
 
     loop {
         set_pa5_high();
